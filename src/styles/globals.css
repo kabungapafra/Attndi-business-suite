@@ -22,11 +22,10 @@ body {
   font-size: var(--text-base);
   font-weight: var(--font-regular);
   line-height: var(--leading-normal);
-  color: var(--text-primary);
-  background-color: var(--surface-bg);
+  color: #1c2438;
+  background-color: #f3f1ec;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* ── Links ────────────────────────────────────────────────── */

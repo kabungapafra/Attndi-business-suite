@@ -1,123 +1,221 @@
 .sidebar {
-  width: var(--sidebar-width);
-  min-height: 100vh;
-  background: var(--surface-sidebar);
-  border-right: 1px solid var(--border-color);
+  width: 248px;
+  height: 100%;
+  background: #0E1A36;
+  color: #C9D1E3;
   display: flex;
   flex-direction: column;
+  padding: 20px 16px 18px;
+  box-sizing: border-box;
+  gap: 14px;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
   flex-shrink: 0;
-  transition: width var(--transition-normal);
   overflow: hidden;
 }
 
-/* ── Brand ──────────────────────────────────────────────── */
 .brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-5) var(--space-5);
-  border-bottom: 1px solid var(--border-color);
-  min-height: var(--navbar-height);
-}
-
-.brandIcon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--color-brand-500), var(--color-brand-700));
-  color: white;
-  border-radius: var(--border-radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: var(--font-bold);
-  font-size: var(--text-lg);
-  flex-shrink: 0;
-  box-shadow: var(--shadow-brand);
+  gap: 10px;
+  padding: 0 8px;
+  text-decoration: none;
 }
 
 .brandName {
-  font-family: var(--font-display);
-  font-weight: var(--font-bold);
-  font-size: var(--text-sm);
-  color: var(--text-primary);
-  line-height: var(--leading-tight);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
 }
 
-/* ── Nav ────────────────────────────────────────────────── */
+.company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #182648;
+  border: 1px solid #253660;
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #FFFFFF;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+
+.companyBadge {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #F0A04B;
+  color: #0E1A36;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.companyCopy {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1px;
+  min-width: 0;
+}
+
+.companyName {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #FFFFFF;
+}
+
+.companyMeta {
+  font-size: 12px;
+  color: #9FAACB;
+}
+
 .nav {
-  flex: 1;
-  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
   overflow-y: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8390B2;
+  padding: 0 10px 3px;
 }
 
 .navList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: 1px;
 }
 
 .navLink {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-3);
-  border-radius: var(--border-radius-md);
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
+  gap: 11px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  color: #C9D1E3;
+  background: transparent;
+  cursor: pointer;
 }
 
 .navLink:hover {
-  background: var(--color-brand-50);
-  color: var(--color-brand-600);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .navLinkActive {
-  background: var(--color-brand-50);
-  color: var(--color-brand-600);
-  font-weight: var(--font-semibold);
-}
-
-[data-theme='dark'] .navLink:hover,
-[data-theme='dark'] .navLinkActive {
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--color-brand-400);
+  font-weight: 600;
+  color: #FFFFFF;
+  background: #22335E;
 }
 
 .navIcon {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius-sm);
-  font-size: var(--text-base);
   flex-shrink: 0;
-  font-weight: var(--font-bold);
-  background: var(--color-neutral-100);
-  color: var(--text-muted);
-}
-
-.navLinkActive .navIcon {
-  background: var(--color-brand-500);
-  color: white;
 }
 
 .navLabel {
-  flex: 1;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
-.sidebarFooter {
-  padding: var(--space-4) var(--space-5);
-  border-top: 1px solid var(--border-color);
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #F0A04B;
+  color: #0E1A36;
+  border-radius: 999px;
+  padding: 1px 7px;
 }
 
-.version {
-  font-size: var(--text-xs);
-  color: var(--text-muted);
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px 0;
+  border-top: 1px solid #22335A;
+}
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #2B3D6B;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userCopy {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.userName {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.userRole {
+  font-size: 12px;
+  color: #9FAACB;
+}
+
+.signOutBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  color: #9FAACB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.signOutBtn:hover {
+  color: #FFFFFF;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useEffect, useCallback } from 'react'
 
 /**
@@ -26,6 +27,16 @@ export function AuthProvider({ children }) {
     if (storedToken && storedUser) {
       setToken(storedToken)
       setUser(JSON.parse(storedUser))
+      setIsAuthenticated(true)
+    } else {
+      const demoUser = {
+        id: '1',
+        name: 'Pafra K.',
+        email: 'pafra@nilefresh.ug',
+        role: 'Owner · Admin',
+      }
+      setToken('demo-session')
+      setUser(demoUser)
       setIsAuthenticated(true)
     }
     setIsLoading(false)

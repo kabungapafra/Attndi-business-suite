@@ -11,9 +11,16 @@ import ForgotPasswordPage from '@pages/Auth/ForgotPasswordPage'
 
 // App Pages
 import DashboardPage from '@pages/Dashboard/DashboardPage'
+import OverviewPage from '@pages/Overview/OverviewPage'
 import EmployeesPage from '@pages/Employees/EmployeesPage'
+import AddEmployeePage from '@pages/Employees/AddEmployeePage'
+import EmployeeProfilePage from '@pages/Employees/EmployeeProfilePage'
+import BranchesPage from '@pages/Branches/BranchesPage'
+import DocumentsPage from '@pages/Documents/DocumentsPage'
 import AttendancePage from '@pages/Attendance/AttendancePage'
 import LeavePage from '@pages/Leave/LeavePage'
+import TasksPage from '@pages/Tasks/TasksPage'
+import PerformancePage from '@pages/Performance/PerformancePage'
 import PayrollPage from '@pages/Payroll/PayrollPage'
 import ReportsPage from '@pages/Reports/ReportsPage'
 import SettingsPage from '@pages/Settings/SettingsPage'
@@ -23,7 +30,8 @@ import NotFoundPage from '@pages/NotFound/NotFoundPage'
  * ProtectedRoute – redirects unauthenticated users to /login
  */
 function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, isLoading } = useAuth()
+  if (isLoading) return null
   return isAuthenticated ? children : <Navigate to="/login" replace />
 }
 
@@ -67,11 +75,18 @@ export default function AppRouter() {
         }
       >
         <Route index element={<Navigate to="/dashboard" replace />} />
-        <Route path="dashboard"  element={<DashboardPage />} />
-        <Route path="employees"  element={<EmployeesPage />} />
-        <Route path="attendance" element={<AttendancePage />} />
-        <Route path="leave"      element={<LeavePage />} />
-        <Route path="payroll"    element={<PayrollPage />} />
+        <Route path="dashboard"    element={<DashboardPage />} />
+        <Route path="overview"     element={<OverviewPage />} />
+        <Route path="employees"    element={<EmployeesPage />} />
+        <Route path="employees/new"          element={<AddEmployeePage />} />
+        <Route path="employees/:employeeId"  element={<EmployeeProfilePage />} />
+        <Route path="branches"     element={<BranchesPage />} />
+        <Route path="documents"    element={<DocumentsPage />} />
+        <Route path="attendance"   element={<AttendancePage />} />
+        <Route path="leave"        element={<LeavePage />} />
+        <Route path="tasks"        element={<TasksPage />} />
+        <Route path="performance"  element={<PerformancePage />} />
+        <Route path="payroll"      element={<PayrollPage />} />
         <Route path="reports"    element={<ReportsPage />} />
         <Route path="settings"   element={<SettingsPage />} />
       </Route>

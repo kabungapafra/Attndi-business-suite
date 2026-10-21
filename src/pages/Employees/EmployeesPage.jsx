@@ -1,24 +1,18 @@
 /**
  * EmployeesPage.jsx
- * TODO: Build the Employees management screen here.
- *
- * Suggested content:
- *  - Search & filter bar (by department, status, employment type)
- *  - Sortable data table with: avatar, name, department, role, status, actions
- *  - Add Employee button → modal or drawer form
- *  - Row actions: View profile, Edit, Deactivate/Delete
- *  - Pagination
- *
- * Data: fetch from employeeService.getAll()
+ * Employee directory – lists everyone in the company with search, filtering,
+ * status management, pagination, import/export, and edit capabilities.
  */
+import { useNavigate } from 'react-router-dom'
+import EmployeesList from '@components/EmployeesList'
 
 export default function EmployeesPage() {
+  const navigate = useNavigate()
+
   return (
-    <div className="page-container animate-fade-in-up">
-      <h1>👥 Employees</h1>
-      <p style={{ color: 'var(--text-muted)', marginTop: '8px' }}>
-        Build the Employees page here – <code>src/pages/Employees/EmployeesPage.jsx</code>
-      </p>
-    </div>
+    <EmployeesList
+      onAddEmployee={() => navigate('/employees/new')}
+      onSelectEmployee={(emp) => navigate(`/employees/${emp.id}`)}
+    />
   )
 }

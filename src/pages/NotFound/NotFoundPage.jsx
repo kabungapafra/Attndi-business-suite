@@ -12,7 +12,7 @@ export default function NotFoundPage() {
       <div style={{ fontSize: '80px' }}>🔍</div>
       <h1 style={{ fontSize: '2.25rem', fontWeight: 700 }}>404 – Page Not Found</h1>
       <p style={{ color: 'var(--text-muted)', maxWidth: '400px' }}>
-        The page you are looking for doesn't exist or has been moved.
+        The page you are looking for doesn&apos;t exist or has been moved.
       </p>
       <Link
         to="/dashboard"

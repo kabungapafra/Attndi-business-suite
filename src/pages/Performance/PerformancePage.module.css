@@ -1,0 +1,363 @@
+.page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 32px;
+  gap: 18px;
+  box-sizing: border-box;
+  min-width: 0;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  color: #141B2D;
+  font-variant-numeric: tabular-nums;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.crumb {
+  font-size: 14px;
+  color: #5A6174;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #141B2D;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+}
+
+.kpiBtn {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #DEDBD1;
+  background: #FFFFFF;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #141B2D;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.remindBtn {
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 0;
+  background: #0E1A36;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.progressCard {
+  background: #FFFFFF;
+  border: 1px solid #E3E0D6;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5A6174;
+}
+
+.progressValue {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #141B2D;
+}
+
+.progressTrack {
+  height: 6px;
+  border-radius: 3px;
+  background: #EDEAE2;
+  display: flex;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+}
+
+.progressSub {
+  font-size: 12px;
+  color: #5A6174;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.tableCard {
+  grid-column: span 8;
+  background: #FFFFFF;
+  border: 1px solid #E3E0D6;
+  border-radius: 14px;
+  padding: 4px 22px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 0.9fr 0.9fr 0.9fr 0.8fr 1fr;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5A6174;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 14px 0 10px;
+  border-bottom: 1px solid #ECE9E0;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 0.9fr 0.9fr 0.9fr 0.8fr 1fr;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  min-height: 56px;
+  border-bottom: 1px solid #F3F1EA;
+}
+
+.empCell {
+  display: flex;
+  flex-direction: column;
+}
+
+.empName {
+  font-weight: 600;
+  color: #141B2D;
+  text-decoration: none;
+}
+
+.empName:hover {
+  color: #1E4FB8;
+}
+
+.empRole {
+  font-size: 12px;
+  color: #5A6174;
+}
+
+.branchCell {
+  color: #3A4153;
+}
+
+.metricCell {
+  color: #141B2D;
+}
+
+.overallNormal {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #141B2D;
+}
+
+.overallLow {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9A2418;
+}
+
+.statusPill {
+  justify-self: start;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.done {
+  background: #E4ECFB;
+  color: #1A3F92;
+}
+
+.mgr {
+  background: #FBEBD8;
+  color: #8A4608;
+}
+
+.self {
+  background: #EFEDE6;
+  color: #3A4153;
+}
+
+.footnote {
+  margin: auto 0 0;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #5A6174;
+}
+
+.sideStack {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.scoreWeightCard {
+  background: #0E1A36;
+  color: #FFFFFF;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sideTitleLight {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.weightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weightItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.weightRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.weightPct {
+  font-weight: 700;
+}
+
+.weightTrack {
+  height: 6px;
+  border-radius: 3px;
+  background: #26365E;
+  display: flex;
+  overflow: hidden;
+}
+
+.weightBar {
+  background: #F0A04B;
+  height: 100%;
+}
+
+.conversationCard {
+  background: #FFFFFF;
+  border: 1px solid #E3E0D6;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.sideTitleDark {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #141B2D;
+}
+
+.convosList {
+  display: flex;
+  flex-direction: column;
+}
+
+.convoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 10px;
+  border-top: 1px solid #F0EDE5;
+}
+
+.convoItem:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.convoName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #141B2D;
+  text-decoration: none;
+}
+
+.convoName:hover {
+  color: #1E4FB8;
+}
+
+.convoWhy {
+  font-size: 13px;
+  color: #3A4153;
+}
+
+@media (max-width: 1100px) {
+  .progressGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .tableCard,
+  .sideStack {
+    grid-column: span 12;
+  }
+}
